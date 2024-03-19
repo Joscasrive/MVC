@@ -2,7 +2,7 @@
 <section class="section-login">
 <div class="contenedor">
 <div class="formulario">
-    <form  action="" method="POST" autocomplete="off" class="formularioAjax" >
+    <form  action="" method="POST" autocomplete="off" >
 		<h2 >Iniciar Sesion</h2>
 
 		<div class="input-contenedor">
@@ -27,3 +27,10 @@
 	</div>
 </div>
 </section>
+
+<?php
+if (isset($_POST['login_usuario']) && isset($_POST['login_clave'])) {
+$insLogin->iniciarSesionControlador();
+}
+
+?>

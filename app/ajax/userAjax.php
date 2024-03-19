@@ -7,15 +7,18 @@ use app\controllers\userController;
     $insuario= new userController();
     if ($_POST['modulo_usuario']=="registrar") {
         echo $insuario->registrarUsuarioControlador();
-        
-    } else {
-        
-    }
+        }
+        if ($_POST['modulo_usuario'] =="eliminar"){
+         echo $insuario->eliminarUsuarioControlador();
+        }
+        if ($_POST['modulo_usuario'] =="actualizar"){
+         echo $insuario->actualizarUsuario();
+        }
     
-   
  } else {
     session_destroy();
     header("Location: ".APP_URL."login/");
     
  }
+ 
  

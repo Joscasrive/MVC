@@ -7,7 +7,7 @@ formularioAjax.forEach(formulario => {
         
         Swal.fire({
             title: "Alerta!",
-            text: "Dseas enviar este formulario?",
+            text: "Deseas enviar este formulario?",
             icon: "question",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -81,3 +81,26 @@ function alertasAjax(alerta){
 
 
 }
+/* Cerrar sesion*/
+let btn_exit = document.getElementById("btn_exit");
+btn_exit.addEventListener("click",function(e){
+  e.preventDefault();
+  Swal.fire({
+    title: "Alerta!",
+    text: "Quieres salir del sistema?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, Salir!",
+    cancelButtonText: "No, cancelar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+       let url= this.getAttribute("href");
+       window.location.href=url;
+        
+    }
+  });
+
+});
+  

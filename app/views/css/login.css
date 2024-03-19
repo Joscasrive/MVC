@@ -123,8 +123,8 @@ input:valid ~ label{
 .label-file{
     display: block;
     color: #000;
-    padding: 4px;
-    width: 190px;
+    width: 150px;
+    padding: 5px;
     height:30px;
     border-radius: 5px;
     background: #fff;

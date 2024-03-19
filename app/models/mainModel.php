@@ -65,14 +65,14 @@ class mainModel{
     $C=0;
     foreach($datos as $clave){
         if($C>=1){$query.=",";}
-        $query.=$clave["campo_marcadores"];
+        $query.=$clave["campo_marcador"];
         $C++;
     }
     $query.=")" ;
     $sql=$this->conexion()->prepare($query);
 
       foreach($datos as $clave){
-        $sql->bindParam($clave["campo_marcadores"],$clave["campo_valor"]);
+        $sql->bindParam($clave["campo_marcador"],$clave["campo_valor"]);
       }
       $sql->execute();
       return $sql;
@@ -105,7 +105,7 @@ public function seleccionarDatos($tipo,$tabla,$campo,$id){
  
  
  protected function actualizarDatos($tabla,$datos,$condicion){
-  $query = " UPDATE $tabla SET ";
+  $query = "UPDATE $tabla SET ";
   $C = 0;
     foreach($datos as $clave){
         if($C>=1){$query.=",";}
@@ -116,19 +116,18 @@ public function seleccionarDatos($tipo,$tabla,$campo,$id){
    
     $sql=$this->conexion()->prepare($query);
     foreach($datos as $clave){
-      $sql->bindParam($clave["campo_marcadores"],$clave["campo_valor"]);
+      $sql->bindParam($clave["campo_marcador"],$clave["campo_valor"]);
     }
     $sql->bindParam($condicion["condicion_marcador"],$condicion["condicion_valor"]);
     $sql->execute();
     
     return $sql;
 
-
-
  }
  
+ 
  protected function eliminarRegistro($tabla,$campo,$id){
-  $sql=$this->conexion()->prepare(" DELATE FROM $tabla WHERE $campo = :id");
+  $sql=$this->conexion()->prepare(" DELETE FROM $tabla WHERE $campo = :id");
   $sql->bindParam(":id",$id);
   $sql->execute();
   return $sql;

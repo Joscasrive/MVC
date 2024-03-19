@@ -6,8 +6,12 @@
     font-family: "Nunito", sans-serif;
     font-size: 20px;
 }
+.relative-2{
+    margin: 20px;
+}
 
 .header{
+    
     background-color: #1b3039;
     display: flex;
     justify-content: space-between;
@@ -90,9 +94,37 @@
     opacity: 1;
    
  }
+ .usuario_nombre{
+    margin-left: 50%;
+ }
  
 
-
-
+.contenedor-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    width:100%;
+}
+.img_usuario{
+    height:200px ;
+    width: 200px;
+    border-radius: 50%;
+}
+.usuario_nombre{
+    padding: auto;
+    margin: 5px;
+   text-align: center;
+    
+}
+.tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    width:100%;
+}
  
  

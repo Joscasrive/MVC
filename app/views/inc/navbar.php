@@ -2,7 +2,7 @@
 <header class="header">
     <div class="logo">
 
- <img src="<?php echo APP_URL?>app/views/img/Mountain.png" alt="Logo del sistema"  >
+ <a href="<?php echo APP_URL?>inicio/"><img src="<?php echo APP_URL?>app/views/img/Mountain.png" alt="Logo del sistema"></a>
  </div>
     
  <nav>
@@ -16,17 +16,17 @@
         </li>  
         <li><a href="#">Categoria</a></li>
         <li><a href="#">Producto</a></li>
-        <li><a href="#">UserName
+        <li><a href="#"><?php echo $_SESSION['usuario']?>
         <ul class="submenu">
-                <li><a href="<?php echo APP_URL?>userUpdate/">Mi cuenta</a></li>
-                <li><a href="<?php echo APP_URL?>userPhoto/">Mi foto</a></li>
+                <li><a href="<?php echo APP_URL."userUpdate/".$_SESSION['id']."/"?>">Mi cuenta</a></li>
+                <li><a href="<?php echo APP_URL."userPhoto/".$_SESSION['id']."/"?>">Mi foto</a></li>
                 
             </ul>
         </a></li>
     </ul>
  </nav>
  
- <a href="<?php echo APP_URL?>logOut/" class="btn"><button>Salir</button></a>
+ <a href="<?php echo APP_URL?>logOut/" class="btn" id="btn_exit"><button>Salir</button></a>
         
     
 </header>

@@ -57,7 +57,7 @@
 			<button type="submit" class="guardar">Guardar</button>
 		</div>
         <div>
-			<button type="submit" class="limpiar">Limpiar</button>
+			<button type="reset" class="limpiar">Limpiar</button>
 		</div>
 
 	</form>
